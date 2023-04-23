@@ -7,11 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    @IBOutlet var redView: UIView!
+    @IBOutlet var yellowView: UIView!
+    @IBOutlet var greenView: UIView!
+    
+    private var cornerRadius: CGFloat = 75
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        redView.layer.cornerRadius = cornerRadius
+        yellowView.layer.cornerRadius = cornerRadius
+        greenView.layer.cornerRadius = cornerRadius
     }
 
 

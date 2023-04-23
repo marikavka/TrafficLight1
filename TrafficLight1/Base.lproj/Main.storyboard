@@ -51,6 +51,11 @@
                             <constraint firstItem="0BO-w1-AdO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wr6-TF-YeR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="K5E-x9-0G4" id="VZm-fL-seD"/>
+                        <outlet property="redView" destination="IB3-jJ-4xm" id="NgR-5n-Jif"/>
+                        <outlet property="yellowView" destination="OZF-ld-c8u" id="qsa-b6-k6J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
