@@ -26,6 +26,13 @@ final class ViewController: UIViewController {
         startButton.layer.cornerRadius = 15
     }
 
-
+    @IBAction func startButtonTapped() {
+        redView.alpha = 1
+        
+        if redView.alpha == 1 {
+            startButton.setTitle("NEXT", for: .normal)
+        }
+    }
+    
 }
 

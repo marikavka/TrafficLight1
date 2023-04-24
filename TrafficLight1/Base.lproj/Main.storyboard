@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,28 +14,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="en0-YY-PCc">
-                                <rect key="frame" x="125.66666666666667" y="74" width="162.66666666666663" height="688.66666666666663"/>
+                                <rect key="frame" x="119.66666666666667" y="89" width="153.66666666666663" height="653.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="0BO-w1-AdO">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="537.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="511.33333333333331"/>
                                         <subviews>
                                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-jJ-4xm">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="162.66666666666666"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="153.66666666666666"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="IB3-jJ-4xm" secondAttribute="height" multiplier="1:1" id="OvS-hI-FLH"/>
                                                 </constraints>
                                             </view>
                                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-ld-c8u">
-                                                <rect key="frame" x="0.0" y="187.66666666666669" width="162.66666666666666" height="162.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="178.66666666666669" width="153.66666666666666" height="153.66666666666669"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             </view>
                                             <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5E-x9-0G4">
-                                                <rect key="frame" x="0.0" y="375" width="162.66666666666666" height="162.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="357.33333333333331" width="153.66666666666666" height="154"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                             </view>
                                         </subviews>
@@ -47,14 +47,17 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCG-22-tV9">
-                                        <rect key="frame" x="0.0" y="635.66666666666663" width="162.66666666666666" height="53"/>
+                                        <rect key="frame" x="0.0" y="609.33333333333337" width="153.66666666666666" height="44"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Start">
+                                        <state key="normal" title="START">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="startButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cf-ZD-LiX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
