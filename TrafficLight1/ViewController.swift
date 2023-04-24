@@ -15,8 +15,13 @@ final class ViewController: UIViewController {
     
     @IBOutlet var startButton: UIButton!
     
-    private var cornerRadius: CGFloat = 75
-    
+    private let cornerRadius: CGFloat = 75
+    var currentState = Light.red
+    enum Light {
+                case red
+                case yellow
+                case green
+            }
     override func viewDidLoad() {
         super.viewDidLoad()
         redView.layer.cornerRadius = cornerRadius
@@ -27,7 +32,21 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func startButtonTapped() {
-        redView.alpha = 1
+
+        switch currentState {
+        case .red:
+            greenView.alpha = 0.2
+            redView.alpha = 1
+            currentState = .yellow
+        case .yellow:
+            redView.alpha = 0.2
+            yellowView.alpha = 1
+            currentState = .green
+        case .green:
+            yellowView.alpha = 0.2
+            greenView.alpha = 1
+            currentState = .red
+        }
         
         if redView.alpha == 1 {
             startButton.setTitle("NEXT", for: .normal)
@@ -35,4 +54,9 @@ final class ViewController: UIViewController {
     }
     
 }
+
+// переменная current state и хранить в ней стэйт светоформа текущий
+// стейт светофора это енум
+//в енуме 3 кейса
+//при нажатии на кнопку с свитч мы смотрим какой сейчас каррент стейт - меня его и абдейтить интерфейс
 
