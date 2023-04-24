@@ -13,6 +13,8 @@ final class ViewController: UIViewController {
     @IBOutlet var yellowView: UIView!
     @IBOutlet var greenView: UIView!
     
+    @IBOutlet var startButton: UIButton!
+    
     private var cornerRadius: CGFloat = 75
     
     override func viewDidLoad() {
@@ -20,6 +22,8 @@ final class ViewController: UIViewController {
         redView.layer.cornerRadius = cornerRadius
         yellowView.layer.cornerRadius = cornerRadius
         greenView.layer.cornerRadius = cornerRadius
+        
+        startButton.layer.cornerRadius = 15
     }
 
 
