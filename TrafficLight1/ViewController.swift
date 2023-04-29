@@ -11,7 +11,6 @@ enum Light {
     case red
     case yellow
     case green
-    
 }
 
 final class ViewController: UIViewController {
@@ -27,10 +26,14 @@ final class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redView.layer.cornerRadius = cornerRadius
-        yellowView.layer.cornerRadius = cornerRadius
-        greenView.layer.cornerRadius = cornerRadius
+    
         startButton.layer.cornerRadius = 15
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redView.layer.cornerRadius = redView.frame.width / 2
+        yellowView.layer.cornerRadius = yellowView.frame.width / 2
+        greenView.layer.cornerRadius = greenView.frame.width / 2
     }
     
     @IBAction func startButtonTapped() {
@@ -53,7 +56,7 @@ final class ViewController: UIViewController {
             currentState = .red
         }
         
-        if currentState == .yellow {
+        if startButton.currentTitle == "START" {
             startButton.setTitle("NEXT", for: .normal)
         }
     }
